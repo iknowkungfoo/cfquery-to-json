@@ -4,8 +4,6 @@
 * @website http://iknowkungfoo.com
 * @Twitter: @iknowkungfoo
 * @Description: A custom JSON render object for ColdFusion queries.
-* @version 3.0
-* @requirements ColdFusion 9.0+ or Railo 4+
 * @Repo: https://github.com/iknowkungfoo/cfquery-to-json
 * @BlogPost: http://cfml.us/Ce
 *
@@ -31,6 +29,11 @@ component output="false" accessors="true" {
         return this;
     }
 
+    public ArrayCollection function setData( required query data ) {
+        variables.data = arguments.data;
+        return this;
+    }
+
     public string function $renderdata() {
         var aData = [];
         var stData = {};
@@ -45,6 +48,18 @@ component output="false" accessors="true" {
         } else {
             return serializeJSON(aData);
         }
+    }
+
+    public ArrayCollection function changeColumnNames( required array names ) {
+        if (!arrayIsEmpty(arguments.names)) {
+            var aOriginalNames = getData().getColumnNames();
+            if (arraylen(aOriginalNames) NEQ arrayLen(arguments.names)) {
+                throw(type="ArrayCollection", message="Requested column names array length does not match the number of query columns.");
+            } else {
+                variables.data.setColumnNames(arguments.names);
+            }
+        }
+        return this;
     }
 
     private string function getColumnList() {
