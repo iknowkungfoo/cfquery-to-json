@@ -1,12 +1,12 @@
 /**
-*
 * @author Adrian J. Moreno
 * @website http://iknowkungfoo.com
 * @Twitter: @iknowkungfoo
 * @Description: A custom JSON render object for ColdFusion queries.
 * @Repo: https://github.com/iknowkungfoo/cfquery-to-json
+* @version 4.0
+* @requirements ColdFusion 9.0+ or Railo 4+
 * @BlogPost: http://cfml.us/Ce
-*
 */
 
 component output="false" accessors="true" {
