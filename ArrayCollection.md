@@ -33,7 +33,7 @@ http://iknowkungfoo.com/blog/index.cfm/2012/5/11/ArrayCollectioncfc-a-custom-JSO
 <cfdump var="#books('Man')#" />
 ```
 
-** ColdBox Handler **
+**ColdBox Handler**
 
 ```
 <cffunction name="queryAsJSON" access="public" output="false" returntype="any">
