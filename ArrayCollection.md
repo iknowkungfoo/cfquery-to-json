@@ -37,8 +37,8 @@ http://iknowkungfoo.com/blog/index.cfm/2012/5/11/ArrayCollectioncfc-a-custom-JSO
 
 ```
 <cffunction name="queryAsJSON" access="public" output="false" returntype="any">
-	<cfset local.arrayCollection = getModel("ArrayCollection").setData( getModel('SomeService').getMyQuery() ) />
-	<cfset event.renderData( data: local.arrayCollection, type: local.arrayCollection.getContentType() ) />
+    <cfset local.arrayCollection = getModel("ArrayCollection").setData( getModel('SomeService').getMyQuery() ) />
+    <cfset event.renderData( data: local.arrayCollection, type: local.arrayCollection.getContentType() ) />
 </cffunction>
 ```
 
