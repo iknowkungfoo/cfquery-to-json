@@ -69,6 +69,24 @@ Added additional keys:
 
 If you trigger setDataOnly(true), the only the contents of the "data" key are returned.
 
+**Output: Version 3**
+```
+{
+    "data": [
+        {
+            "bookid": 8,
+            "genre": "Fiction",
+            "title": "Apparition Man"
+        },
+        {
+            "bookid": 2,
+            "genre": "Non-fiction",
+            "title": "Shopping Mart Mania"
+        }
+    ]
+}
+```
+
 **New in Version 3**
 
 Converted to a script CFC
