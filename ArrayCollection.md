@@ -69,7 +69,7 @@ Added additional keys:
 
 If you trigger setDataOnly(true), the only the contents of the "data" key are returned.
 
-**Output: Version 3**
+**Output: Versions 1 - 3**
 ```
 {
     "data": [
