@@ -33,6 +33,15 @@ http://iknowkungfoo.com/blog/index.cfm/2012/5/11/ArrayCollectioncfc-a-custom-JSO
 <cfdump var="#books('Man')#" />
 ```
 
+** ColdBox Handler **
+
+```
+<cffunction name="queryAsJSON" access="public" output="false" returntype="any">
+	<cfset local.arrayCollection = getModel("ArrayCollection").setData( getModel('SomeService').getMyQuery() ) />
+	<cfset event.renderData( data: local.arrayCollection, type: local.arrayCollection.getContentType() ) />
+</cffunction>
+```
+
 **Output: Version 4**
 ```
 {
