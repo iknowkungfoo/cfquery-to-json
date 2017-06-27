@@ -30,7 +30,7 @@ http://iknowkungfoo.com/blog/index.cfm/2012/5/11/ArrayCollectioncfc-a-custom-JSO
     <cfreturn rs.ac.$renderdata() />
 </cffunction>
 
-<cfdump var="#books('Man')# />
+<cfdump var="#books('Man')#" />
 ```
 
 **Output: Version 4**
