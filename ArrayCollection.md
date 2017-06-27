@@ -33,23 +33,40 @@ http://iknowkungfoo.com/blog/index.cfm/2012/5/11/ArrayCollectioncfc-a-custom-JSO
 <cfdump var="#books('Man')# />
 ```
 
-**Output**
+**Output: Version 4**
 ```
-{    
-    "data":[
+{
+    "data": [
         {
-    		"bookid":8,
-			"genre":"Fiction",
-			"title":"Apparition Man"
-		},
+            "bookid": 8,
+            "genre": "Fiction",
+            "title": "Apparition Man"
+        },
         {
-			"bookid":2,
-			"genre":"Non-fiction",
-			"title":"Shopping Mart Mania"
-		}
-    ]
+            "bookid": 2,
+            "genre": "Non-fiction",
+            "title": "Shopping Mart Mania"
+        }
+    ],
+    "message": "Array Collection populated.",
+    "meta": {
+        "offset": 0,
+        "pageSize": 2,
+        "totalRecords": 2
+    },
+    "success": true
 }
 ```
+
+**New in Version 4**
+Refactored script CFC
+
+Added additional keys: 
+* "message": String
+* "meta": object containing "offset", "pageSize" and "totalRecords"
+* "success": boolean
+
+If you trigger setDataOnly(true), the only the contents of the "data" key are returned.
 
 **New in Version 3**
 
