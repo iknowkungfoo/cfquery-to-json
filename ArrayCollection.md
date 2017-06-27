@@ -59,6 +59,7 @@ http://iknowkungfoo.com/blog/index.cfm/2012/5/11/ArrayCollectioncfc-a-custom-JSO
 ```
 
 **New in Version 4**
+
 Refactored script CFC
 
 Added additional keys: 
