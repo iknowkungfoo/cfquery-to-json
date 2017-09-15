@@ -63,6 +63,13 @@ component output="false" accessors="true" {
      * Setup JSON response packet.
      * @return ArrayCollection
      */
+     property string dataFormat;
+
+     /**
+      * @required false
+      * @default "array"
+      * @hint return data as array or structure
+      */
     public ArrayCollection function init() {
         variables.stData = {
             "success": true
