@@ -1,3 +1,3 @@
 # Testing
 
-A collection of tools to convert query objects to structs and arrays, when can then be serialized to varous forms of JSON.
+A collection of tools to convert ColdFusion query objects to structs and arrays, then serialize those to varous forms of JSON.
